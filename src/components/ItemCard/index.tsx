@@ -1,7 +1,8 @@
+import { formatCurrency } from "../../utilities/formatCurrency";
+
 type storeItemsProps = {
   id: number;
   title: string;
-  description: string;
   price: number;
   image: string;
   category: string;
@@ -10,7 +11,6 @@ type storeItemsProps = {
 export default function index({
   id,
   title,
-  description,
   price,
   image,
   category,
@@ -29,25 +29,27 @@ export default function index({
             />
           </div>
         </div>
-        {/* bootom section */}
-        <div className="mt-2 p-4">
+        {/* bottom section */}
+        <div className="mt-2 p-4 ">
           {/* title */}
           <div>
             <h1 className="text-lg font-bold line-clamp-1">{title}</h1>
           </div>
-          {/* description */}
-          <p className="line-clamp-2 text-base">{description}</p>
+          {/* category */}
+          <div className="text-sm">{category}</div>
           {/* rating & price */}
           <div className="flex flex-row justify-between items-center my-2">
             <div className="flex items-center space-x-2">
               <box-icon color="#10b981" type="solid" name="star"></box-icon>
-              <span>{rating.rate}/{rating.count}</span>
+              <span>
+                {rating.rate}/{rating.count}
+              </span>
             </div>
             <div className="flex items-center space-x-2 font-bold">
-              <span>$ {price}</span>
+              <span>{formatCurrency(price)}</span>
             </div>
           </div>
-          {/* tags */}
+          {/* buttons */}
           <div>
             <div></div>
           </div>
