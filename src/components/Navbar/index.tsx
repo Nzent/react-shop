@@ -9,7 +9,6 @@ export default function index() {
         <div className="basis-1/3">
           <div className="flex justify-start items-center">
             <div>
-              any:
               <box-icon
                 name="shopping-bag"
                 size="md"

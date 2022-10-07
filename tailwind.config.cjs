@@ -3,6 +3,7 @@ module.exports = {
   content: [
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
+    "node_modules/flowbite-react/**/*.{js,jsx,ts,tsx}"
   ],
   theme: {
     extend: {
@@ -13,5 +14,8 @@ module.exports = {
 
     },
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/line-clamp'),
+    require('flowbite/plugin')
+  ],
 }
