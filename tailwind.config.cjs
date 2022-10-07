@@ -5,7 +5,13 @@ module.exports = {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        'pacifico': ['Pacifico', 'cursive'],
+        'poppins': ['Poppins', 'sans-serif'],
+      }
+
+    },
   },
   plugins: [],
 }
